@@ -10,7 +10,7 @@ class LandingPage extends StatefulWidget {
   
 
  class _LandingPageState extends State<LandingPage>{
-   String descripcion = 'Soy apasionado del Ecommerce y Marketing Digital, creador de aplicaciones con Flutter para iOS y Android, trabajando como Freelance';
+   String descripcion = 'Apasionado de la Tecnología y los negocios por Internet, FAN declarado de los productos de Google, Google Cloud, G Suite, Pixel, Android y todos sus derivados. Creador de apps en Flutter.';
 
 
   _launchURL(String url) async {
@@ -46,7 +46,7 @@ class LandingPage extends StatefulWidget {
               padding: EdgeInsets.symmetric( horizontal:40 ),
               child: Text('Esteban Terrazas', style: TextStyle(
                 color: Colors.white,
-                fontSize: 20.0,
+                fontSize: 24.0,
                 fontWeight: FontWeight.w500
               )  ),
             ),
@@ -61,6 +61,31 @@ class LandingPage extends StatefulWidget {
               ) ),
             ),
             SizedBox( height: 20.0, ),
+            Text('Colaboraciones', style: TextStyle(
+              color: Colors.white,
+              fontSize: 18
+               ), 
+            ),
+            SizedBox( height: 40.0, ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                GestureDetector(
+                  onTap: (){
+                    _launchURL("https://hablemosdeecommerce.com/author/eterrazas/");
+                  },
+                  child: Image.asset('assets/hde.png', width: 200.0, height: 54.0, ),
+                ),
+                SizedBox( width: 30.0, ),
+                GestureDetector(
+                  onTap: (){
+                    _launchURL("https://dosisgeek.news/author/esteban/");
+                  },
+                  child: Image.asset('assets/dosis.png', width: 200.0, height: 54.0, ),
+                ),
+              ],
+            ),
+            SizedBox( height: 40, ),
             Text('Connect with me', style: TextStyle(
               color: Colors.white,
               fontSize: 16,
